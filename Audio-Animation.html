@@ -1,0 +1,85 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Audio-Aniamtion</title>
+</head>
+<style>
+    /* create wave audio loading */
+
+.loading
+{
+    width:500px;
+    height: 50px;
+    margin: 60px auto;
+    position:relative;
+}
+
+.loading span
+{   width:10px;
+    display:block;
+    position:relative;
+    bottom:0px;
+    height:5px;
+    background-color:cornflowerblue;
+    animation: waving 1.5s infinite ease-in-out  
+
+}
+
+.loading span:nth-of-type(2)
+{
+    left: 11px;
+    animation-delay: .2s
+}
+.loading span:nth-of-type(3)
+{
+    left: 22px;
+    animation-delay: .4s
+}.loading span:nth-of-type(4)
+{
+    left: 33px;
+    animation-delay: .6s
+}
+.loading span:nth-last-of-type
+{
+    left: 44px;
+    animation-delay: .7s;
+}
+
+
+@keyframes waving
+{
+    0%,40%,70%,100%
+    {
+        height:0px;
+        transform:translateY(10px);
+        background-color:palevioletred;
+        
+        
+        
+    }
+    
+    20%
+    {
+        height:40px;     
+        /*لو غيرت في الطول هنا هيتغير الشكل
+        */
+       transform:translateY(-5px);
+
+        transform:rotateX(30deg);
+        background-color:orangered;
+}
+}
+
+</style>
+<body>
+    <div class="audio-Animation">
+        <span></span>
+        <span></span>
+        <span></span>
+        <span></span>
+    </div>
+
+</body>
+</html>
