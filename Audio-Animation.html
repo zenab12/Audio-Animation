@@ -6,79 +6,173 @@
     <title>Audio-Aniamtion</title>
 </head>
 <style>
-    /* create wave audio loading */
 
-.loading
+.audioAnimation
 {
-    width:500px;
-    height: 50px;
-    margin: 60px auto;
+   
+    height: 60px;
+    margin: 120px 37%;
     position:relative;
 }
 
-.loading span
+.audioAnimation span
 {   width:10px;
     display:block;
-    position:relative;
+    position:absolute;
     bottom:0px;
-    height:5px;
-    background-color:cornflowerblue;
-    animation: waving 1.5s infinite ease-in-out  
+    height:15px;
+    background:greenyellow;
+    animation: wavingone 1s infinite ease-in-out  ;
+    animation-direction: alternate-reverse;
+
+    
+}
+
+.audioAnimation span:nth-of-type(2)
+{
+    left: 10px;
+    height: 25px;
+    bottom:-6px;
+    background:orangered;
+    animation: wavingtwo 1s infinite ease-in-out  ;
+    animation-delay: 2s;
+    animation-direction: alternate-reverse;
+
+
+
+}
+.audioAnimation span:nth-of-type(3)
+{
+    left: 21px;
+    height: 40px;
+    background:paleturquoise;
+    bottom:-12px;
+    animation: waving 1s infinite ease-in-out  ;
+    animation-direction: alternate-reverse;
+
+    animation-delay: 3s;
+
+
+}.audioAnimation span:nth-of-type(4)
+{
+    left: 31px;
+    height: 25px;
+    bottom:-6px;
+    background:palevioletred;
+    animation: wavingtwo 1s infinite ease-in-out  ;
+    animation-direction: alternate-reverse;
+
+    animation-delay: 4s;
+
 
 }
 
-.loading span:nth-of-type(2)
+.audioAnimation span:last-of-type
 {
-    left: 11px;
-    animation-delay: .2s
-}
-.loading span:nth-of-type(3)
-{
-    left: 22px;
-    animation-delay: .4s
-}.loading span:nth-of-type(4)
-{
-    left: 33px;
-    animation-delay: .6s
-}
-.loading span:nth-last-of-type
-{
-    left: 44px;
-    animation-delay: .7s;
+    left: 41px;
+    height: 15px;
+
+    background:greenyellow;
+    animation: wavingone 1s infinite ease-in-out  ;
+    animation-direction: alternate-reverse;
+
+    animation-delay: 5s;
+
+
 }
 
 
 @keyframes waving
 {
-    0%,40%,70%,100%
+    0%,100%
     {
         height:0px;
-        transform:translateY(10px);
-        background-color:palevioletred;
+        transform:translateY(2px);     
+        background:rgb(255, 255, 0);
+       
+       
+      
         
+    }
+    40% {
+        height:40px;
+        bottom:0px;
+        background:rgb(226, 110, 106);   
+        border-radius: 5px;
+        
+    }
+  
+    
+    70%{
+        height:43px;
+        background:rgb(250, 81, 3);   
         
         
     }
-    
-    20%
-    {
-        height:40px;     
-        /*لو غيرت في الطول هنا هيتغير الشكل
-        */
-       transform:translateY(-5px);
+}
 
-        transform:rotateX(30deg);
-        background-color:orangered;
+@keyframes wavingtwo
+{
+    0%,100%
+    {
+        height:0px;
+        transform:translateY(0px);        
+        background:greenyellow;
+
+        
+    }
+
+    40% {
+        height:25px;
+        top:40px;
+        background:yellow;
+        border-radius: 5px;
+    }
+    
+    70%{
+        height:30px;
+        background: rgb(255, 144, 26);
+        
+    }
 }
+
+
+@keyframes wavingone
+{
+    0%,100%
+    {
+        height:0px;
+        transform:translateY(1px);        
+        
+        
+    }
+
+    40% {
+        height:15px;
+        top:45px;
+        background: red;
+        border-radius: 5px;
+
+    }
+    
+    70%{
+        height:18px;
+        background: orange
+        
+    }
 }
+
 
 </style>
 <body>
-    <div class="audio-Animation">
+    <div class="audioAnimation">
         <span></span>
         <span></span>
         <span></span>
         <span></span>
+        <span></span>
+    
+     
     </div>
 
 </body>
